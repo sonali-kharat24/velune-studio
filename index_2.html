@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  VELUNE STUDIO - index.html  (Editorial redesign, v2)
+  ------------------------------------------------------------
+  This file holds the CONTENT of the website.
+  The look lives in style.css, the behavior in script.js.
+
+  Search for "EDIT:" to find everything you need to replace
+  (email, Instagram, WhatsApp, project links, form service).
+  ============================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO: title and description shown in Google results -->
+  <title>Velune Studio | Thoughtfully Designed. Beautifully Built.</title>
+  <meta name="description" content="Velune Studio is an independent creative web design studio crafting thoughtful, modern websites for small businesses, cafes, restaurants and creative brands." />
+  <meta name="theme-color" content="#F8F5EF" />
+
+  <!-- Open Graph: the preview shown when the link is shared on WhatsApp, LinkedIn, etc. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Velune Studio" />
+  <meta property="og:title" content="Velune Studio | Thoughtfully Designed. Beautifully Built." />
+  <meta property="og:description" content="An independent creative web design studio for small businesses and creative brands." />
+  <!-- EDIT (after deploying): add og:url and og:image with your real site address, for example:
+       <meta property="og:url" content="https://your-site.vercel.app/" />
+       <meta property="og:image" content="https://your-site.vercel.app/preview.jpg" /> -->
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Custom favicon concept: two overlapping circles (sage and rose), the studio's mark -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23F8F5EF'/%3E%3Ccircle cx='40' cy='42' r='24' fill='%23A8B5A0'/%3E%3Ccircle cx='60' cy='58' r='24' fill='%23D8B7B0' fill-opacity='.85'/%3E%3C/svg%3E" />
+
+  <!-- Free Google Fonts: Fraunces (soft, light display serif) + Hanken Grotesk (clean body text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,100;1,9..144,300..500,100&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Accessibility: lets keyboard users skip the menu -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ======================= NAVIGATION ======================= -->
+  <header class="site-header" id="header">
+    <div class="container nav-wrap">
+
+      <a href="#home" class="logo" aria-label="Velune Studio, back to top">
+        <span class="logo-mark" aria-hidden="true"></span>
+        Velune Studio
+      </a>
+
+      <!-- Hamburger button (mobile only) -->
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span>
+      </button>
+
+      <nav class="nav" id="navMenu" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#work" class="nav-link">Work</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-dark btn-small">Let's Create Together</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ======================= HERO =======================
+         The big idea: a website going from rough sketch to finished design.
+         On load the divider sweeps across; visitors can also drag it. -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div class="hero-text">
+          <!-- The headline is split into lines so each line can slide up once on page load -->
+          <h1 class="hero-title">
+            <span class="line"><span>Your Vision,</span></span>
+            <span class="line line-indent"><span>Beautifully</span></span>
+            <span class="line"><span>Brought to Life.</span></span>
+          </h1>
+          <p class="lead">
+            We design thoughtful, modern websites that help small businesses and
+            creative brands build a beautiful digital presence.
+          </p>
+          <div class="btn-row">
+            <a href="#work" class="btn btn-dark">Explore Our Work</a>
+            <a href="#contact" class="btn btn-ghost">Start a Project</a>
+          </div>
+        </div>
+
+        <!-- Sketch-to-finished composition. Built with CSS only, no images. -->
+        <div class="hero-art">
+          <span class="hv-circle" aria-hidden="true"></span>
+
+          <div class="browser">
+            <div class="browser-bar" aria-hidden="true">
+              <i></i><i></i><i></i>
+              <span class="browser-url">yourbrand.com</span>
+            </div>
+
+            <div class="hv-stage" id="compare">
+
+              <!-- FINISHED design (the full layer underneath) -->
+              <div class="layer layer-finished" aria-hidden="true">
+                <div class="m-nav">
+                  <span class="m-logo">Your Brand</span>
+                  <span class="m-links"><i>Work</i><i>About</i><i>Contact</i></span>
+                </div>
+                <div class="m-copy">
+                  <p class="m-title">A beautiful first impression.</p>
+                  <span class="m-line"></span>
+                  <span class="m-line m-short"></span>
+                  <span class="m-btn">Say hello</span>
+                </div>
+                <div class="m-art"><span class="m-sun"></span></div>
+                <div class="m-cards"><span></span><span></span><span></span></div>
+              </div>
+
+              <!-- SKETCH (wireframe layer on top, cut off by the divider) -->
+              <div class="layer layer-sketch" aria-hidden="true">
+                <div class="w-nav">
+                  <span class="w-box"></span>
+                  <span class="w-links"><i></i><i></i><i></i></span>
+                </div>
+                <div class="w-copy">
+                  <i class="w-bar"></i><i class="w-bar"></i><i class="w-bar w-s"></i>
+                  <i class="w-thin"></i><i class="w-thin w-s"></i>
+                  <span class="w-btn"></span>
+                </div>
+                <div class="w-art"></div>
+                <div class="w-cards"><span></span><span></span><span></span></div>
+              </div>
+
+              <!-- Divider line + round handle -->
+              <span class="hv-handle" aria-hidden="true"></span>
+
+              <!-- The real control: an invisible slider that makes dragging and keyboard use work -->
+              <input class="hv-range" id="compareRange" type="range" min="0" max="100" value="50" step="1"
+                     aria-label="Drag to compare the rough sketch with the finished design" />
+            </div>
+          </div>
+
+          <p class="hv-caption" aria-hidden="true"><span>Sketch</span><span>Finished</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= ABOUT ======================= -->
+    <section class="sec" id="about">
+      <div class="container">
+        <p class="folio">About Velune Studio</p>
+
+        <div class="about-grid">
+          <h2 class="reveal">Designing Digital Experiences with Intention.</h2>
+
+          <div class="about-body reveal">
+            <p>
+              Velune Studio is an independent creative web design studio focused on creating
+              thoughtful, visually beautiful, and user-friendly websites for growing businesses.
+            </p>
+            <p>
+              From elegant landing pages to complete business websites, we bring ideas to life
+              through clean design, meaningful details, and modern web experiences.
+            </p>
+            <a href="#contact" class="text-link">Tell us about your idea</a>
+          </div>
+
+          <!-- Quiet abstract composition: arch, circle and a single line -->
+          <div class="about-art" aria-hidden="true">
+            <span class="aa-arch"></span>
+            <span class="aa-circle"></span>
+            <span class="aa-line"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= SERVICES ======================= -->
+    <section class="sec sec-beige" id="services">
+      <div class="container">
+        <p class="folio">Services</p>
+
+        <div class="services-grid">
+          <header class="services-head reveal">
+            <h2>What We Create</h2>
+            <p>Websites designed around your goals, built to look beautiful on every screen.</p>
+          </header>
+
+          <!--
+            Each <article class="svc"> is one service.
+            data-type on the link pre-selects the "Website Type" in the contact form.
+          -->
+          <div class="svc-list">
+
+            <article class="svc">
+              <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+              <div class="svc-body">
+                <h3>Business Website Design</h3>
+                <div>
+                  <p>Professional websites for small businesses and startups.</p>
+                  <a href="#contact" class="text-link" data-type="Business Website">Start a Project</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="svc">
+              <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8z"/><path d="M16 9h2a2 2 0 0 1 0 4h-2M7 3v2M11 3v2"/></svg></div>
+              <div class="svc-body">
+                <h3>Cafe &amp; Restaurant Websites</h3>
+                <div>
+                  <p>Beautiful websites with menus, galleries, contact details, and business information.</p>
+                  <a href="#contact" class="text-link" data-type="Cafe / Restaurant Website">Start a Project</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="svc">
+              <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div>
+              <div class="svc-body">
+                <h3>Landing Page Design</h3>
+                <div>
+                  <p>Modern landing pages for products, services, campaigns, and businesses.</p>
+                  <a href="#contact" class="text-link" data-type="Landing Page">Start a Project</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="svc">
+              <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg></div>
+              <div class="svc-body">
+                <h3>Personal Portfolio Websites</h3>
+                <div>
+                  <p>Elegant portfolios for professionals, creators, and freelancers.</p>
+                  <a href="#contact" class="text-link" data-type="Personal Portfolio">Start a Project</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="svc">
+              <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.7"/><path d="M20 4v4h-4"/></svg></div>
+              <div class="svc-body">
+                <h3>Website Redesign</h3>
+                <div>
+                  <p>Refreshing existing websites with modern layouts and improved visual design.</p>
+                  <a href="#contact" class="text-link" data-type="Website Redesign">Start a Project</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="svc">
+              <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c3 2 5 5 5 9l-2 3H9l-2-3c0-4 2-7 5-9z"/><circle cx="12" cy="10" r="1.5"/><path d="M9 18l-2 3M15 18l2 3"/></svg></div>
+              <div class="svc-body">
+                <h3>Website Development &amp; Deployment</h3>
+                <div>
+                  <p>Building responsive websites and deploying them online.</p>
+                  <a href="#contact" class="text-link" data-type="Development & Deployment">Start a Project</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= SELECTED WORK ======================= -->
+    <section class="sec" id="work">
+      <div class="container">
+        <p class="folio">Selected Work</p>
+
+        <header class="sec-head reveal">
+          <h2>Projects &amp; Concepts</h2>
+          <p>A look at the style and thinking behind our work. Projects are labelled honestly as concepts or demos.</p>
+        </header>
+
+        <div class="work-grid">
+
+          <!-- PROJECT 1: real live link (wide feature) -->
+          <article class="work work-feature reveal">
+            <div class="wv wv-cafe" aria-hidden="true">
+              <span class="wv-shape wv-arch"></span>
+              <div class="wf">
+                <div class="wf-bar"><i></i><i></i><i></i></div>
+                <div class="wf-body">
+                  <div class="wf-nav"><b>Brew &amp; Bloom</b><span>Menu</span><span>Visit</span></div>
+                  <p class="wf-title">Good coffee, good company.</p>
+                  <span class="wf-pill">Visit us</span>
+                  <div class="wf-tiles"><i></i><i></i><i></i></div>
+                </div>
+              </div>
+              <div class="wp"><i class="wp-img"></i><i class="wp-line"></i><i class="wp-line wp-s"></i></div>
+            </div>
+
+            <div class="work-info">
+              <p class="work-cat">Cafe Website Concept</p>
+              <h3>Brew &amp; Bloom Cafe</h3>
+              <p>A warm, inviting digital experience designed for a contemporary cafe, featuring an elegant visual identity, menu presentation, and welcoming atmosphere.</p>
+              <!-- target="_blank" opens a new tab; rel keeps the link safe -->
+              <a href="https://brew-and-bloom-cafe-roan.vercel.app/" class="btn btn-dark" target="_blank" rel="noopener noreferrer">View Live Website</a>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: placeholder link -->
+          <article class="work work-arch reveal">
+            <div class="wv wv-noir" aria-hidden="true">
+              <span class="wv-shape wv-circle"></span>
+              <div class="wf">
+                <div class="wf-bar"><i></i><i></i><i></i></div>
+                <div class="wf-body">
+                  <div class="wf-nav"><b>NOIR ANALYTICS</b><span>Insights</span><span>Contact</span></div>
+                  <p class="wf-title">Data, made clear.</p>
+                  <svg class="wf-chart" viewBox="0 0 200 70" preserveAspectRatio="none"><path d="M0 58 C30 52 40 20 70 30 S110 55 135 28 S180 10 200 6"/></svg>
+                  <div class="wf-tiles"><i></i><i></i><i></i></div>
+                </div>
+              </div>
+              <div class="wp"><i class="wp-img"></i><i class="wp-line"></i><i class="wp-line wp-s"></i></div>
+            </div>
+
+            <div class="work-info">
+              <p class="work-cat">Creative Website Concept</p>
+              <h3>NOIR ANALYTICS</h3>
+              <p>A sophisticated dark-themed website concept for a modern analytics brand, combining bold typography, minimal layouts, and a refined digital identity.</p>
+              <!--
+                EDIT: Replace href="#" with your real project URL, then DELETE the
+                data-placeholder="true" attribute. Until then, clicking this button
+                shows a friendly "link coming soon" message instead of a broken page.
+              -->
+              <a href="#" class="btn btn-dark" data-placeholder="true">View Project</a>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: this website -->
+          <article class="work work-arch work-offset reveal">
+            <div class="wv wv-velune" aria-hidden="true">
+              <span class="wv-shape wv-rings"></span>
+              <div class="wf">
+                <div class="wf-bar"><i></i><i></i><i></i></div>
+                <div class="wf-body">
+                  <div class="wf-nav"><b>Velune Studio</b><span>Work</span><span>Contact</span></div>
+                  <p class="wf-title">Thoughtfully designed.</p>
+                  <span class="wf-pill">Start a project</span>
+                  <div class="wf-tiles"><i></i><i></i><i></i></div>
+                </div>
+              </div>
+              <div class="wp"><i class="wp-img"></i><i class="wp-line"></i><i class="wp-line wp-s"></i></div>
+            </div>
+
+            <div class="work-info">
+              <p class="work-cat">Studio Website</p>
+              <h3>Velune Studio</h3>
+              <p>The digital home of Velune Studio, showcasing its design philosophy, services, and creative work.</p>
+              <!-- This is the website you are looking at, so the button goes back to the top -->
+              <a href="#home" class="btn btn-dark">View Project</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= WHY WORK WITH US ======================= -->
+    <section class="sec sec-sage" id="why">
+      <div class="container">
+        <p class="folio">Why Work With Us</p>
+
+        <div class="why-grid">
+          <h2 class="reveal">Thoughtful Design. Clear Communication.</h2>
+
+          <ul class="why-list">
+            <li>Clean and modern design</li>
+            <li>Mobile-friendly websites</li>
+            <li>Attention to detail</li>
+            <li>Client-focused approach</li>
+            <li>Transparent project communication</li>
+            <li>Thoughtful design process</li>
+            <li>Reliable delivery</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= WORKING PROCESS =======================
+         This is a real sequence, so the numbers stay. -->
+    <section class="sec" id="process">
+      <div class="container">
+        <p class="folio">Working Process</p>
+
+        <header class="sec-head reveal">
+          <h2>From Idea to Launch</h2>
+          <p>A simple, transparent process so you always know what happens next.</p>
+        </header>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num">01</span>
+            <h3>Discover</h3>
+            <p>We learn about your business, your goals, and what you need from your website.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">02</span>
+            <h3>Design</h3>
+            <p>We create the website structure and visual direction, and share it with you for feedback.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">03</span>
+            <h3>Develop</h3>
+            <p>We build a responsive, functional website that works smoothly on every device.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">04</span>
+            <h3>Launch</h3>
+            <p>We review the details together, finalize the site, and deploy it online.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ======================= PRICING ======================= -->
+    <section class="sec sec-beige" id="pricing">
+      <div class="container">
+        <p class="folio">Starting Packages</p>
+
+        <header class="sec-head reveal">
+          <h2>Simple, Transparent Pricing</h2>
+          <p>Three starting points to help you plan. Every project is quoted to fit your needs.</p>
+        </header>
+
+        <div class="price-grid">
+
+          <article class="price-card">
+            <h3>Starter</h3>
+            <p class="price-desc">One-page website</p>
+            <p class="price"><small>Starting at</small>&#8377;1,999</p>
+            <ul class="price-list">
+              <li>Responsive website design</li>
+              <li>Basic website sections</li>
+              <li>Agreed revisions</li>
+              <li>Deployment assistance where included</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-full" data-package="Starter">Choose Starter</a>
+          </article>
+
+          <!-- "featured" turns this card charcoal so it stands out -->
+          <article class="price-card featured">
+            <span class="badge">Most Popular Starting Point</span>
+            <h3>Business</h3>
+            <p class="price-desc">Up to 4-page business website</p>
+            <p class="price"><small>Starting at</small>&#8377;4,999</p>
+            <ul class="price-list">
+              <li>Responsive website design</li>
+              <li>Basic website sections</li>
+              <li>Agreed revisions</li>
+              <li>Deployment assistance where included</li>
+            </ul>
+            <a href="#contact" class="btn btn-light btn-full" data-package="Business">Choose Business</a>
+          </article>
+
+          <article class="price-card">
+            <h3>Premium</h3>
+            <p class="price-desc">Up to 5-page professional website</p>
+            <p class="price"><small>Starting at</small>&#8377;7,999</p>
+            <ul class="price-list">
+              <li>Responsive website design</li>
+              <li>Basic website sections</li>
+              <li>Agreed revisions</li>
+              <li>Deployment assistance where included</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-full" data-package="Premium">Choose Premium</a>
+          </article>
+
+        </div>
+
+        <div class="price-note">
+          <div>
+            <p><strong>Final pricing depends on project requirements, content, features, and scope.</strong></p>
+            <p>Domain, paid hosting, advanced functionality, and maintenance are separate unless explicitly included. The number of revisions is agreed before the project begins.</p>
+          </div>
+          <a href="#contact" class="btn btn-dark" data-package="Custom quote">Request a Custom Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= FAQ ======================= -->
+    <section class="sec" id="faq">
+      <div class="container">
+        <p class="folio">FAQ</p>
+
+        <div class="faq-grid">
+          <h2 class="reveal">Questions, Answered</h2>
+
+          <!--
+            Accordion: each question is a <button>. script.js opens/closes the answer.
+            To add a question, copy one .faq-item block and give the new button/answer new ids.
+          -->
+          <div class="faq-list">
+
+            <div class="faq-item">
+              <h3><button class="faq-q" aria-expanded="false" aria-controls="faq1" id="faq1-btn">What types of websites do you create?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+              <div class="faq-a" id="faq1" role="region" aria-labelledby="faq1-btn"><div><p>We create business websites, cafe and restaurant websites, landing pages, personal portfolios, and website redesigns. We can also deploy your finished website online.</p></div></div>
+            </div>
+
+            <div class="faq-item">
+              <h3><button class="faq-q" aria-expanded="false" aria-controls="faq2" id="faq2-btn">How long does a website take?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+              <div class="faq-a" id="faq2" role="region" aria-labelledby="faq2-btn"><div><p>It depends on the size of the website and how quickly content and feedback are shared. A simple one-page site is usually quicker than a multi-page site. We'll give you a realistic timeline after understanding your project.</p></div></div>
+            </div>
+
+            <div class="faq-item">
+              <h3><button class="faq-q" aria-expanded="false" aria-controls="faq3" id="faq3-btn">What do I need to provide?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+              <div class="faq-a" id="faq3" role="region" aria-labelledby="faq3-btn"><div><p>Usually your business name, logo (if you have one), the text you'd like on the site, photos, and contact details. If you don't have everything yet, tell us and we'll guide you on what's needed.</p></div></div>
+            </div>
+
+            <div class="faq-item">
+              <h3><button class="faq-q" aria-expanded="false" aria-controls="faq4" id="faq4-btn">Is the website mobile-friendly?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+              <div class="faq-a" id="faq4" role="region" aria-labelledby="faq4-btn"><div><p>Yes. Every website is designed to work on phones, tablets, and desktop screens.</p></div></div>
+            </div>
+
+            <div class="faq-item">
+              <h3><button class="faq-q" aria-expanded="false" aria-controls="faq5" id="faq5-btn">Can you redesign an existing website?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+              <div class="faq-a" id="faq5" role="region" aria-labelledby="faq5-btn"><div><p>Yes. Share your current website and tell us what you'd like to improve. We can refresh the layout, visuals, and mobile experience while keeping what already works.</p></div></div>
+            </div>
+
+            <div class="faq-item">
+              <h3><button class="faq-q" aria-expanded="false" aria-controls="faq6" id="faq6-btn">Do you provide domain and hosting?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+              <div class="faq-a" id="faq6" role="region" aria-labelledby="faq6-btn"><div><p>We can help you deploy your website online, and where it fits the project we can use free hosting options. A custom domain name and any paid hosting are separate costs unless explicitly included in your agreement.</p></div></div>
+            </div>
+
+            <div class="faq-item">
+              <h3><button class="faq-q" aria-expanded="false" aria-controls="faq7" id="faq7-btn">How can I start a project?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+              <div class="faq-a" id="faq7" role="region" aria-labelledby="faq7-btn"><div><p>Fill in the project inquiry form below, or reach out by email, Instagram, or WhatsApp. Tell us about your business and what you have in mind, and we'll reply to discuss the next steps.</p></div></div>
+            </div>
+
+            <div class="faq-item">
+              <h3><button class="faq-q" aria-expanded="false" aria-controls="faq8" id="faq8-btn">What is the payment process?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+              <div class="faq-a" id="faq8" role="region" aria-labelledby="faq8-btn"><div><p>Scope, price, and payment terms are agreed clearly before work begins, so there are no surprises. We'll confirm these details with you when we send your quote.</p></div></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= CONTACT / INQUIRY ======================= -->
+    <section class="sec sec-dark" id="contact">
+      <div class="container">
+        <p class="folio">Project Inquiry</p>
+
+        <div class="contact-grid">
+
+          <div class="contact-info reveal">
+            <h2>Have a Beautiful Idea in Mind?</h2>
+            <p class="contact-lead">Let's turn your vision into a thoughtful digital experience.</p>
+
+            <ul class="contact-list">
+              <!-- EDIT: replace each placeholder below with your real details -->
+              <li>
+                <span class="ci-label">Email</span>
+                <a href="mailto:hello@example.com">hello@example.com</a>
+              </li>
+              <li>
+                <span class="ci-label">Instagram</span>
+                <a href="https://instagram.com/your_handle" target="_blank" rel="noopener noreferrer">@your_handle</a>
+              </li>
+              <li>
+                <span class="ci-label">WhatsApp</span>
+                <!-- Format: https://wa.me/ + country code + number (no spaces, no +). Example: https://wa.me/919876543210 -->
+                <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
+              </li>
+            </ul>
+          </div>
+
+          <!--
+            CONTACT FORM
+            A plain website cannot send messages by itself. See script.js ("FORM_ENDPOINT")
+            to connect it to a real form service such as Formspree.
+            Until then, the form opens the visitor's email app instead.
+          -->
+          <form class="form" id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" placeholder="Your full name" required />
+              <small class="error" id="nameError"></small>
+            </div>
+
+            <div class="field">
+              <label for="business">Business Name</label>
+              <input type="text" id="business" name="business" autocomplete="organization" placeholder="Your business or brand (optional)" />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" required />
+              <small class="error" id="emailError"></small>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="type">Website Type</label>
+                <select id="type" name="type">
+                  <option>Business Website</option>
+                  <option>Cafe / Restaurant Website</option>
+                  <option>Landing Page</option>
+                  <option>Personal Portfolio</option>
+                  <option>Website Redesign</option>
+                  <option>Development &amp; Deployment</option>
+                  <option>Something else</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="budget">Project Budget</label>
+                <select id="budget" name="budget">
+                  <option>Not sure yet</option>
+                  <option>Under &#8377;5,000</option>
+                  <option>&#8377;5,000 - &#8377;10,000</option>
+                  <option>&#8377;10,000+</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="timeline">Preferred Timeline</label>
+              <select id="timeline" name="timeline">
+                <option>Flexible</option>
+                <option>As soon as possible</option>
+                <option>Within 2 weeks</option>
+                <option>Within a month</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">Project Description</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your business and what you'd like your website to do." required></textarea>
+              <small class="error" id="messageError"></small>
+            </div>
+
+            <button type="submit" class="btn btn-dark btn-full">Send Inquiry</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-statement">Thoughtfully Designed. Beautifully Built.</p>
+
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="logo">
+            <span class="logo-mark" aria-hidden="true"></span>
+            Velune Studio
+          </a>
+        </div>
+
+        <nav aria-label="Footer navigation">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">Portfolio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://instagram.com/your_handle" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Velune Studio. All rights reserved.</p>
+        <a href="#home" class="to-top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Small message that appears for placeholder links (controlled by script.js) -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
